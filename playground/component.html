@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <app-header></app-header>
+        <app-content></app-content>
+        <app-footer></app-footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // Vue.component('컴포넌트 이름', 컴포넌트내용);
+        Vue.component('app-header', {   // 인스턴스 아래 컴포넌트 등록
+            template: '<h1>Header</h1>'
+        });
+        Vue.component('app-content', {
+            template: '<h2>Body</h2>'
+        })
+        Vue.component('app-footer', {
+            template: '<h1>Footer</h1>'
+        });
+
+        new Vue({   // 인스턴스가 root
+            el: '#app'
+        });
+    </script>
+    
+</body>
+</html>
